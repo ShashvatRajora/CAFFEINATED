@@ -3,7 +3,7 @@ CAFFEINATED is a simple website made up for a cafe based business using basic el
 
 Caffeinated presents you with a basic template on how you can get things started when using basic html and css for webpages , here it contains :-
 
-Home 
+Home \n
 Menu
 Drinks
 Events
