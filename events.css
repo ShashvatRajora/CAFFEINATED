@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Header Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a.active {
+    border-bottom: 2px solid #ffcc00;
+}
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Events Section */
+.events {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* filter: blur(1px); */
+}
+
+.events h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.events p {
+    font-size: 18px;
+    color: wheat;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.event-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.event-item h2 {
+    font-size: 28px;
+    color: white;
+    margin-top: 0;
+}
+
+.event-item p {
+    font-size: 16px;
+    color: wheat;
+    margin-top: 5px;
+}
+
+.coming-soon {
+    font-size: 18px;
+    color: #ff6600;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .events {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .events h1 {
+        font-size: 28px;
+    }
+
+    .events p {
+        font-size: 16px;
+    }
+
+    .event-item h2 {
+        font-size: 24px;
+    }
+
+    .event-item p {
+        font-size: 14px;
+    }
+
+}
+.events {
+    position: relative; /* Required for the absolute positioning of the pseudo-element */
+    padding: 20px;
+    color: #fff; /* Text color */
+    z-index: 1; /* Ensures text is above the background */
+}
+
+.events {
+    background-image: url('images/bg.jpeg');
+    background-size: cover; /* Ensure the image covers the area */
+    background-position: center; /* Center the image */
+    padding: 20px; /* Add padding */
+    height: auto; /* Set height based on content */
+    color: #fff; /* Adjust text color for visibility */
+    position: relative; /* For pseudo-element positioning */
+    /* top: 0px; */
+    bottom: 10px;
+}
+.events::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background-image: url('images/bg.jpeg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Adjust the blur level as needed */
+    z-index: -1; /* Places the pseudo-element behind the text */
+}
+

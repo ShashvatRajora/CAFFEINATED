@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Header Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a.active {
+    border-bottom: 2px solid #ffcc00;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* More Info Section */
+.more-info {
+    position: relative; /* Set relative to position the overlay */
+    max-width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures no content goes outside the border-radius */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.more-info img {
+    width: 100%; /* Make sure the image is full width */
+    display: block;
+}
+
+/* Layer 2: Blackish blurred overlay */
+.more-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(3, 3, 3, 0.4); /* Semi-transparent black */
+    backdrop-filter: blur(2px); /* Apply blur effect to the layer */
+    z-index: 1; /* Ensure it sits above the image */
+}
+
+/* Text styling */
+.more-info h1, .more-info p {
+    position: relative; /* Position text relative to the overlay */
+    z-index: 2; /* Ensure text appears on top of the overlay */
+    color: white; /* White text for contrast */
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.more-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.more-info p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .more-info {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .more-info h1 {
+        font-size: 28px;
+    }
+
+    .more-info p {
+        font-size: 16px;
+    }
+}

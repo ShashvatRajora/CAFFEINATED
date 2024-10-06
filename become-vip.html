@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a VIP - Caffeinated</title>
+    <link rel="shortcut icon" href="images\logo2.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="become-vip.css"> <!-- Link to VIP CSS -->
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="logo">
+            <img src="images\logo2.jpeg" alt="Caffeinated Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="drinks.html">Drinks</a>
+            <a href="events.html">Events</a>
+            <a href="moreinfo.html">More Info</a>
+            <a href="become-vip.html" class="active">Become a VIP</a>
+            <a href="sign-in.html">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- VIP Section -->
+    <section class="vip-section">
+        <h1>Become a Caffeinated VIP</h1>
+        <p>Join our VIP program and unlock exclusive rewards, discounts, and special access to events! As a valued member, you'll enjoy the following benefits:</p>
+
+        <ul class="vip-benefits">
+            <li>20% off all purchases, every time you visit.</li>
+            <li>Early access to seasonal menu items.</li>
+            <li>Invitations to VIP-only events and tastings.</li>
+            <li>Free drink on your birthday!</li>
+            <li>Priority seating at our café during busy hours.</li>
+        </ul>
+
+        <p>To join, simply fill out the form below and start enjoying the perks of being a VIP at Caffeinated.</p>
+
+        <form class="vip-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+            <div class="form-group">
+                <label for="favorite-drink">Favorite Drink:</label>
+                <input type="text" id="favorite-drink" name="favorite-drink">
+            </div>
+            <button type="submit" class="submit-btn">Join Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Caffeinated. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

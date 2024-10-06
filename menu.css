@@ -1,0 +1,162 @@
+/* Global Styles (same as before) */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    height: 80px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a.active {
+    border-bottom: 2px solid #ffcc00;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Menu Items (Responsive) */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-item .item-info {
+    padding: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.menu-item h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.menu-item p {
+    color: #777;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    header .logo img {
+        height: 60px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .menu-items {
+        padding: 20px;
+    }
+
+    .menu-item img {
+        height: 200px;
+    }
+
+    .menu-item h2 {
+        font-size: 20px;
+    }
+
+    .menu-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .menu-item img {
+        height: 150px;
+    }
+
+    .menu-item h2 {
+        font-size: 18px;
+    }
+
+    .menu-item p {
+        font-size: 12px;
+    }
+}
